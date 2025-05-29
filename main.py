@@ -12,7 +12,7 @@ from kahoot.packets.server.question_start import QuestionStartPacket
 
 async def handle_question_start(packet: QuestionStartPacket, client_instance: KahootClient, bot_name: str):
     question_number: int = packet.game_block_index
-    await asyncio.sleep(0.5)
+    await asyncio.sleep(0.1)
     try:
         await client_instance.send_packet(RespondPacket(client_instance.game_pin, random.randint(0, 3), question_number))
     except Exception as e:
