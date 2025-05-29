@@ -91,7 +91,7 @@ async def main():
         if i < number_of_bots - 1: # Nie czekaj po ostatnim bocie
             # Ten `sleep` kontroluje, jak szybko *inicjujemy* kolejne boty.
             # Dostosuj tę wartość, aby uzyskać pożądany efekt pojawiania się botów.
-            await asyncio.sleep(2) # np. 2 sekundy przerwy między inicjacjami
+            await asyncio.sleep(0.5) # np. 2 sekundy przerwy między inicjacjami
 
     print(f"\nProces inicjowania {number_of_bots} botów zakończony.")
     print("Boty są teraz aktywne i oczekują na zdarzenia z gry.")
