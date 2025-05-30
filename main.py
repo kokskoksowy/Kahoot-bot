@@ -25,7 +25,7 @@ async def handle_question_ready(packet: QuestionReadyPacket, bot_name: str):
 
 async def run_single_bot(game_pin: int, bot_base_name: str, bot_number: int):
     client = KahootClient()
-    bot_name = f"{bot_base_name} {bot_number}"
+    bot_name = f"{bot_base_name}{bot_number}"
 
     # Rejestracja handlerów
     client.on("question_start", lambda packet: handle_question_start(packet, client, bot_name))
